@@ -24,3 +24,10 @@ code {
 .border{
   border:solid 1px white
 }
+
+.imgborder{
+  border:solid 1px white;
+  background-image: url('./images/save.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
