@@ -16,3 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.img{
+  background-image: url('images/bgimg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.border{
+  border:solid 1px white
+}
