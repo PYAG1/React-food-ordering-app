@@ -3,10 +3,13 @@ import CircularProgress from '@mui/material/CircularProgress';
 import image1 from '../images/save.jpg'
 import {CiBurger} from 'react-icons/ci'
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function Firstpage() {
 
   const [show,setshow]= useState(true);
+
+  const move= useNavigate()
 
   useEffect(()=>{
     const timeout = setTimeout(() => {
@@ -31,7 +34,7 @@ export default function Firstpage() {
 
 {
   !show && (
- <div className='flex flex-col justify-evenly h-[600px] items-center md:gap-[3em] md:h-[600px] gap-[2em]'>
+ <div className='flex flex-col justify-evenly h-[600px] items-center md:gap-[2em] md:h-[570px] gap-[2em]'>
   <div className=' flex flex-col justify-center items-center'>
     <CiBurger size={30} className='text-[#ccff01]' />
     <p className='text-[#ccff01]'>MascotBites</p>
@@ -43,11 +46,14 @@ export default function Firstpage() {
 </div>
  
 
-      <div className='text-[#ccff01] flex flex-col items-center gap-5 '>
+      <div className='text-[#ccff01] flex flex-col items-center gap-4 '>
         <p className=' text-2xl text-center text-[white] font-[Oswald]'>Tasty and Delicious Food just a tap away!</p>
-        <Button variant="outlined" className='w-[100px]'  color="inherit">
+        <Button variant="outlined" className='w-[100px]'  color="inherit" onClick={()=>{
+          move('/main')
+        }}>
           Order
         </Button>
+ 
 
       </div>
   </div>
