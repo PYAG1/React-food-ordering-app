@@ -19,7 +19,7 @@ export default function Firstpage() {
     <div className=' bg-[#1f1f1f] w-full h-screen flex felx-col justify-center items-center p-[3em]'>
 
 
-<div className={show ? 'border flex flex-col items-center h-[200px] justify-evenly':'border flex flex-col items-center h-[600px]  justify-evenly'}>
+<div className={show ? 'border flex flex-col items-center h-[200px] justify-evenly':''}>
 
 
 {show && (<div className='flex flex-col items-center text-[white] pt-3 '>
@@ -31,14 +31,20 @@ export default function Firstpage() {
 
 {
   !show && (
- 
-      <div className='text-[#ccff01] flex flex-col'>
+ <div className='flex flex-col justify-evenly h-[600px]  '>
+  <div className=' flex flex-col justify-center items-center'>
+    <CiBurger size={30} className='text-[#ccff01]' />
+    <p className='text-[#ccff01]'>MascotBites</p>
+  </div>
+
+      <div className='text-[#ccff01] flex flex-col items-center gap-5'>
         <p className=' text-2xl text-center text-[white] font-[Oswald]'>Tasty and Delicious Food just a tap away!</p>
         <Button variant="outlined" className='w-[100px]'  color="inherit">
           Order
         </Button>
 
       </div>
+  </div>
   )
 }
 </div>
