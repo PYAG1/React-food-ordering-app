@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Firstpage/>}/>
         <Route path='/main' element={<Main/>}/>
+        <Route path='/'/>
       </Routes>
 
     </div>

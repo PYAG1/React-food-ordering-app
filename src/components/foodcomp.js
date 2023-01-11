@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 export default function Food(props){
     return (
 
-        <div className="border w-full h-[230px]" >
+        <div className="border w-full  h-[300px] md:h-[270px] p-1" >
         <CardContent>
           <div>
-            <img src={`../images/${props.img}`} className=" w-full h-[130px] object-contain" alt={props.name}/>
+            <img src={`../images/${props.img}`} className=" w-full h-[140px] object-scale-down" alt={props.name}/>
           </div>
        {/* <CardMedia
         component="img"
@@ -33,6 +33,12 @@ export default function Food(props){
           <Typography>GHc{props.price}</Typography>
           </div>
         </CardContent>
+
+        <div>
+          <Button>
+            View
+          </Button>
+        </div>
         
         
       </div>
