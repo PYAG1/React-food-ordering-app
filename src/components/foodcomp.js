@@ -6,15 +6,20 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Food(props){
+
+const move = useNavigate();
+
+
     return (
 
         <div className="border w-full  h-[300px] md:h-[270px] p-1" >
         <CardContent>
           <div>
-            <img src={`../images/${props.img}`} className=" w-full h-[140px] object-scale-down" alt={props.name}/>
+            <img src={`../images/${props.img}`} className=" w-full h-[140px] object-contain aspect-[4/3]" alt={props.name}/>
           </div>
        {/* <CardMedia
         component="img"
@@ -35,7 +40,7 @@ export default function Food(props){
         </CardContent>
 
         <div>
-          <Button>
+          <Button onClick={()=>move(`/main/${props.id}`)}>
             View
           </Button>
         </div>

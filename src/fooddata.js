@@ -5,7 +5,7 @@ export default [
         name: 'Mediterranean  Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'midsalad.png'
+        img:'test.jpg'
         ,delivery: '45-50'
       },
       {
@@ -109,7 +109,7 @@ export default [
         name: 'Egg Noodles',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img: 'Nood.png'
+        img: 'pizz1.png'
         ,delivery: '30-50'
       },
       {
