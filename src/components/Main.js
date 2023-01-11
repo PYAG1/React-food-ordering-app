@@ -11,9 +11,9 @@ console.log(fooddata);
   })
 
   return (
-    <div>
+    <div >
         <Nav/>
-<div>
+<div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4 px-3 items-center'>
       {foodD}
       </div>
     </div>

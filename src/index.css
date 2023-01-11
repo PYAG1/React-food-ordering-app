@@ -17,7 +17,6 @@ code {
     monospace;
 }
 .img{
-  background-image: url('images/bgimg.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -27,7 +26,7 @@ code {
 
 .imgborder{
   border:solid 1px white;
-  background-image: url('./images/save.jpg');
+
   background-size: contain;
   background-repeat: no-repeat;
 }

@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 export default function Food(props){
     return (
 
-        <Card sx={{ width: 170}}>
+        <div className="border w-full h-[250px]" >
         <CardContent>
           <div>
-            <img src={`../images/${props.img}`} className="border w-full h-[130px] object-contain" alt={props.name}/>
+            <img src={`../images/${props.img}`} className=" w-full h-[130px] object-contain" alt={props.name}/>
           </div>
        {/* <CardMedia
         component="img"
@@ -34,6 +34,6 @@ export default function Food(props){
         </CardContent>
         
         
-      </Card>
+      </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress';
-import image1 from '../images/save.jpg'
+import image1 from '../components/save.jpg'
 import {CiBurger} from 'react-icons/ci'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
