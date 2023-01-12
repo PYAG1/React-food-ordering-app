@@ -1,9 +1,17 @@
 import React from 'react'
 import { Button } from '@mui/material'
 import { FaArrowLeft, FaTimes } from 'react-icons/fa'
+import fooddata from '../fooddata'
+import Extrainfo from './extrainfo'
+import { useSelector } from 'react-redux'
+
 
 
 export default function Menucontainer() {
+    const cartList = useSelector((state)=> state.cart.itemList)
+    const data = cartList.map((item)=>{
+        return <Extrainfo key={item.id} {...item}/>
+    })
   return (
     <div className='fixed top-0 right-0 w-full md:w-[375px] z-[101] drop-shadwo-md h-screen bg-white flex flex-col'>
         <div className='w-full flex items-center justify-between p-4'>
@@ -31,12 +39,38 @@ export default function Menucontainer() {
             Burger
         </p>
 
-       </div>
-
-
                 
 
     </div>
+    <div className=' w-full flex-1 bg-[#353535] rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2'>
+      <div className='w-full flex items-center justify-between'>
+      
+        <p className=' text-lg'>Subtotal</p>
+        <p className=' text-lg'>Ghc 300.00</p>
+
+        
+
+      </div>
+      <div className='w-full flex items-center justify-between'>
+      
+      <p className=' text-lg'>Delivery</p>
+      <p className=' text-lg'>Ghc 300.00</p>
+
+      
+
+    </div>
+
+    <div className='w-full flex items-center justify-between'>
+      
+      <p className=' text-lg'>Total</p>
+      <p className=' text-lg'>Ghc 300.00</p>
+
+    </div>
+
+    <div className=' w-full border-b border-white my-2'></div>
+
+
+    </div>
 
 
         </div>
@@ -44,7 +78,7 @@ export default function Menucontainer() {
     </div>
         
         
-        </div>
+        
 
     
   )
