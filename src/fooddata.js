@@ -5,7 +5,7 @@ export default [
         name: 'Mediterranean  Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'test.jpg'
+        img:''
         ,delivery: '45-50'
       },
       {
@@ -13,15 +13,15 @@ export default [
         name: 'Isreali Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 50,
-        img: 'israeli-salad.png'
+        img: ''
         ,delivery: '10-15'
       },
       {
         id: 3,
-        name: 'Burger',
+        name: 'Chicken Noodle Soup',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 65,
-        img: 'pizza1.jpg'
+        price: 95,
+        img: 'ChickenFilletsoup.jpg'
         ,delivery: '30-40'
       },
       {
@@ -29,7 +29,7 @@ export default [
         name: 'Potatoes and Beef',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 95,
-        img: 'c7.png'
+        img: ''
         ,delivery: '45-50'
       },
       {
@@ -45,7 +45,7 @@ export default [
         name: 'Veggie Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'c1.png'
+        img:''
         ,delivery: '15-20'
       },
       {
@@ -53,15 +53,15 @@ export default [
         name: 'Seafood Fish Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:  'acseafood.png'
+        img: ''
         ,delivery: '40-50'
       },
       {
         id: 8,
-        name: 'Asparagus Salad',
+        name: 'Chicken Combo',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: 'assalad.png'
+        price: 194,
+        img: 'chickendelight.jpg'
         ,delivery: '20-30'
       },
       {
@@ -69,7 +69,7 @@ export default [
         name: 'Bolognese Sandwich',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img: 'sandwich.png'
+        img: ''
         ,delivery: '5-10'
       },
       {
@@ -77,7 +77,7 @@ export default [
         name: 'English Breakfast',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'englishbr.png' 
+        img:'' 
         ,delivery: '25-35'
       },
       {
@@ -93,7 +93,7 @@ export default [
         name: 'fried chicken',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img: 'chicken.png'
+        img: ''
         ,delivery: '45-50'
       },
       {
@@ -101,23 +101,23 @@ export default [
         name: 'Fruit Smoothie',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img: 'fruits.png'
+        img: ''
         ,delivery: '15-25'
       },
       {
         id: 14,
-        name: 'Egg Noodles',
+        name: 'Egg Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: 'pizz1.png'
+        price: 34,
+        img: 'Egg Salad.jpg'
         ,delivery: '30-50'
       },
       {
         id: 15,
-        name: 'Sweet Cheese Pasta',
+        name: 'Mid-East Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: 'huuh.png'
+        price: 90,
+        img: 'Mideast.jpg'
         ,delivery: '40-50'
       },
       {
@@ -138,10 +138,27 @@ export default [
       },
       {
         id: 18,
-        name: 'Double Beef Burger',
+        name: 'Zinger Burger',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 65,
-        img: 'doublebeef.jpg'
+        img: 'Zingerburger.jpg'
+        ,delivery: '40-50'
+      },
+      {
+        id: 19,
+        name: 'Hawain Pizza',
+        info: 'spicey with garlic and then deep fried to crispy perfection',
+        price: 65,
+        img: 'pizza2.jpg'
+        ,delivery: '40-50'
+      },
+ 
+      {
+        id: 20,
+        name: 'Shrimp Salad',
+        info: 'spicey with garlic and then deep fried to crispy perfection',
+        price: 200,
+        img: 'test.jpg'
         ,delivery: '40-50'
       },
 
