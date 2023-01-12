@@ -4,16 +4,16 @@ export default [
         id: 1,
         name: 'Mediterranean  Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img:''
+        price: 44,
+        img:'First.jpg'
         ,delivery: '45-50'
       },
       {
         id: 2,
-        name: 'Isreali Salad',
+        name: 'Spicy Chicken Wings',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 50,
-        img: ''
+        price: 150,
+        img: 'chicken wings.jpg'
         ,delivery: '10-15'
       },
       {
@@ -26,36 +26,21 @@ export default [
       },
       {
         id: 4,
-        name: 'Potatoes and Beef',
+        name: 'Double Decker Burger',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 95,
-        img: ''
+        img: 'tripple.jpg'
         ,delivery: '45-50'
       },
       {
         id: 5,
-        name: 'Shrimp Special',
+        name: 'Beef Glazzed Pizza',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 100,
-        img: 'shrimp.png'
+        img: 'beefpizz.jpg'
         ,delivery: '35-50'
       },
-      {
-        id: 6,
-        name: 'Veggie Salad',
-        info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img:''
-        ,delivery: '15-20'
-      },
-      {
-        id: 7,
-        name: 'Seafood Fish Salad',
-        info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: ''
-        ,delivery: '40-50'
-      },
+      
       {
         id: 8,
         name: 'Chicken Combo',
@@ -66,18 +51,18 @@ export default [
       },
       {
         id: 9,
-        name: 'Bolognese Sandwich',
+        name: 'Avocado Siren Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: ''
+        price: 99,
+        img: 'acv.jpg'
         ,delivery: '5-10'
       },
       {
         id: 10,
-        name: 'English Breakfast',
+        name: 'Devils Breath Burger',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'' 
+        img:'Devil.jpg' 
         ,delivery: '25-35'
       },
       {
@@ -90,18 +75,18 @@ export default [
       },
       {
         id: 12,
-        name: 'fried chicken',
+        name: 'Pork Chicken Stew',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: ''
+        price: 204,
+        img: 'Pork Chicken Stew.jpg'
         ,delivery: '45-50'
       },
       {
         id: 13,
-        name: 'Fruit Smoothie',
+        name: 'Chippy Burger Combo',
         info: 'spicey with garlic and then deep fried to crispy perfection',
-        price: 24,
-        img: ''
+        price: 90,
+        img: 'Chippycom.jpg'
         ,delivery: '15-25'
       },
       {

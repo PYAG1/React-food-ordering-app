@@ -24,17 +24,21 @@ const cart = createSlice({
                         price:newitem.price,
                         quantity:1,
                         totalprice:newitem.price,
-                        name:newitem.name
+                        name:newitem.name,
+                        img:newitem.img
                     }
                 )
-                
-
                 state.totalQuantity++;
-                state.showCart=true;
             }
          
 
-        }
+        },
+
+
+        togglestae(state){
+            state.showCart = !state.showCart
+
+        },
 
         
     }

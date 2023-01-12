@@ -19,7 +19,8 @@ const addhandler= ()=>{
   dispatch(cartActions.Add({
    id,
     name,
-    price
+    price,
+    img
 
 
   }))
@@ -31,7 +32,7 @@ const addhandler= ()=>{
         <div className=" w-full  h-[300px] md:h-[300px] p" >
         <CardContent>
           <div>
-            <img src={`../images/${img}`} className=" w-full h-[200px] object-cover " alt={name}/>
+            <img src={`../images/${img}`} className=" w-full h-[200px] object-cover rounded-[3em]" alt={name}/>
           </div>
        {/* <CardMedia
         component="img"
@@ -45,17 +46,23 @@ const addhandler= ()=>{
 
     />*/}
   
-<div className=" pt-[1em]">
+<div className=" pt-[1em] flex justify-between">
+  <div>
           <Typography>{name}</Typography>
           <Typography>GHc{price}</Typography>
+          </div>
+          
+          <button onClick={addhandler}>
+            Add
+          </button>
+
+
+
           </div>
         </CardContent>
 
         <div>
 
-          <button onClick={addhandler}>
-            Add
-          </button>
          { /*<Button onClick={()=>move(`/main/${props.id}`)}>
             View
   </Button>*/}

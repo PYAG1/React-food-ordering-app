@@ -1,8 +1,16 @@
 import React from 'react'
 import {CiBurger} from 'react-icons/ci'
 import CustomizedBadges from './shoppinglogo'
+import { cartActions } from '../store/cartslice';
+import { useDispatch } from 'react-redux';
 
 export default function Nav() {
+  
+const dispatch = useDispatch();
+
+const open= ()=>{
+dispatch(cartActions.togglestae())
+}
   
   return (
     <div>
@@ -13,7 +21,9 @@ export default function Nav() {
 
             </div>
             <div className=' mr-[1em]'>
+              <button onClick={open}>
             <CustomizedBadges/>
+            </button>
             </div>
         </header>
 
