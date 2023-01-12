@@ -3,9 +3,8 @@ import React from 'react'
 
 export default function Extrainfo({id,name,quanity,total,price,img}) {
 
-
-  return (
-    <div className=' bg-[#353535] w-full flex justify-between text-[white] rounded-[10px]'>
+  /*
+  <div className=' bg-[#353535] w-full flex justify-between text-[white] rounded-[10px]'>
       <div className=' flex w-full md:justify-between px-2'>
 
       <div className='  w-[100px] h-[100px] flex justify-center items-center'>
@@ -37,14 +36,17 @@ export default function Extrainfo({id,name,quanity,total,price,img}) {
 
 
       </div>
+  */ 
+
+  return (
+    <div className=' w-full p-1 px-2 rounded-lg flex items-center gap-2'>
+       <img src={`../images/${img}`} className='w-[80px] h-[80px] object-cover rounded-[20px]'/>
 
 
-  
-
-
-
-
+                
 
     </div>
+    
+    
   )
 }
