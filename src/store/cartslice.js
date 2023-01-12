@@ -39,6 +39,10 @@ const cart = createSlice({
             state.showCart = !state.showCart
 
         },
+        clearcart(state){
+            state.itemList = []
+            state.totalQuantity= 0
+        }
 
         
     }

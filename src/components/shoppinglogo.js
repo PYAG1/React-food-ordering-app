@@ -19,11 +19,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function CustomizedBadges() {
 
+  const show = useSelector((state)=> state.cart.showCart)
+
     const cartnum = useSelector((state)=>state.cart.totalQuantity)
     console.log(cartnum)
   return (
     <IconButton aria-label="cart" >
-      <StyledBadge badgeContent={cartnum} color="secondary">
+      
+      <StyledBadge badgeContent={cartnum} className='z-0' color="secondary">
         <ShoppingCartIcon className=' text-[white]' />
       </StyledBadge>
     </IconButton>
