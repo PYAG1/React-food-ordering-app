@@ -21,7 +21,7 @@ export default [
         name: 'Burger',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 65,
-        img: 'bigBurger.png'
+        img: 'pizza1.jpg'
         ,delivery: '30-40'
       },
       {
@@ -29,7 +29,7 @@ export default [
         name: 'Potatoes and Beef',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 95,
-        img: 'im.png'
+        img: 'c7.png'
         ,delivery: '45-50'
       },
       {
@@ -45,7 +45,7 @@ export default [
         name: 'Veggie Salad',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img:'rand.png'
+        img:'c1.png'
         ,delivery: '15-20'
       },
       {
@@ -85,7 +85,7 @@ export default [
         name: 'Hawaian Pizza',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
-        img: 'pizza.png' 
+        img: 'pizza3.jpg' 
         ,delivery: '45-50'
       },
       {
@@ -118,6 +118,30 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
         img: 'huuh.png'
+        ,delivery: '40-50'
+      },
+      {
+        id: 16,
+        name: 'Double Beef Burger',
+        info: 'spicey with garlic and then deep fried to crispy perfection',
+        price: 65,
+        img: 'doublebeef.jpg'
+        ,delivery: '40-50'
+      },
+      {
+        id: 17,
+        name: 'Colonel Burger',
+        info: 'spicey with garlic and then deep fried to crispy perfection',
+        price: 60,
+        img: 'Colonelburger.jpg'
+        ,delivery: '40-50'
+      },
+      {
+        id: 18,
+        name: 'Double Beef Burger',
+        info: 'spicey with garlic and then deep fried to crispy perfection',
+        price: 65,
+        img: 'doublebeef.jpg'
         ,delivery: '40-50'
       },
 

@@ -6,7 +6,7 @@ const cart = createSlice({
     initialState:{
         itemList: [],
         totalQuantity:0,
-        showChart:false
+        showCart:false
     },
     reducers:{
         Add(state,action){
@@ -27,8 +27,12 @@ const cart = createSlice({
                         name:newitem.name
                     }
                 )
+                
+
+                state.totalQuantity++;
+                state.showCart=true;
             }
-            state.totalQuantity++;
+         
 
         }
 

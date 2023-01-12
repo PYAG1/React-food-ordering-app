@@ -7,19 +7,31 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/cartslice";
 
-
-export default function Food(props){
+export default function Food({name,id,price,img}){
 
 const move = useNavigate();
+const dispatch = useDispatch();
+
+const addhandler= ()=>{
+  dispatch(cartActions.Add({
+   id,
+    name,
+    price
+
+
+  }))
+}
 
 
     return (
 
-        <div className="border w-full  h-[300px] md:h-[270px] p-1" >
+        <div className=" w-full  h-[300px] md:h-[300px] p" >
         <CardContent>
           <div>
-            <img src={`../images/${props.img}`} className=" w-full h-[140px] object-contain aspect-[4/3]" alt={props.name}/>
+            <img src={`../images/${img}`} className=" w-full h-[200px] object-cover " alt={name}/>
           </div>
        {/* <CardMedia
         component="img"
@@ -34,15 +46,19 @@ const move = useNavigate();
     />*/}
   
 <div className=" pt-[1em]">
-          <Typography>{props.name}</Typography>
-          <Typography>GHc{props.price}</Typography>
+          <Typography>{name}</Typography>
+          <Typography>GHc{price}</Typography>
           </div>
         </CardContent>
 
         <div>
-          <Button onClick={()=>move(`/main/${props.id}`)}>
+
+          <button onClick={addhandler}>
+            Add
+          </button>
+         { /*<Button onClick={()=>move(`/main/${props.id}`)}>
             View
-          </Button>
+  </Button>*/}
         </div>
         
         

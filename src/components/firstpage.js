@@ -4,10 +4,13 @@ import image1 from '../components/save.jpg'
 import {CiBurger} from 'react-icons/ci'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Showcart from './showcart';
 
 export default function Firstpage() {
 
   const [show,setshow]= useState(true);
+
+
 
   const move= useNavigate()
 
@@ -20,6 +23,7 @@ export default function Firstpage() {
 
 
     <div className=' bg-[#1f1f1f] w-full h-screen flex felx-col justify-center items-center p-[3em]'>
+      
 
 
 <div className={show ? ' flex flex-col items-center h-[200px] justify-evenly':''}>
