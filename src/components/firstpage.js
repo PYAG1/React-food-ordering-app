@@ -38,7 +38,7 @@ export default function Firstpage() {
 
 {
   !show && (
- <div className='flex flex-col justify-evenly h-[600px] items-center md:gap-[2em] md:h-[570px] gap-[2em]'>
+ <div className='scale-in-bottom flex flex-col justify-evenly h-[600px] items-center md:gap-[2em] md:h-[570px] gap-[2em]'>
   <div className=' flex flex-col justify-center items-center'>
     <CiBurger size={30} className='text-[#ccff01]' />
     <p className='text-[#ccff01]'>MascotBites</p>

@@ -6,7 +6,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 44,
         img:'First.jpg'
-        ,delivery: '45-50'
+        ,delivery: '45'
         ,urlparams:'salad'
      
       },
@@ -16,7 +16,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 150,
         img: 'chicken wings.jpg'
-        ,delivery: '10-15'
+        ,delivery: '10'
         ,urlparams:'chicken'
       },
       {
@@ -25,7 +25,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 95,
         img: 'ChickenFilletsoup.jpg'
-        ,delivery: '30-40',
+        ,delivery: '30',
         urlparams:'chicken'
       },
       {
@@ -34,7 +34,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 95,
         img: 'tripple.jpg'
-        ,delivery: '45-50'
+        ,delivery: '45'
         ,urlparams:'burger'
       },
       {
@@ -43,7 +43,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 100,
         img: 'beefpizz.jpg'
-        ,delivery: '35-50'
+        ,delivery: '35'
         ,urlparams:'pizza'
       },
       
@@ -53,7 +53,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 194,
         img: 'chickendelight.jpg'
-        ,delivery: '20-30',
+        ,delivery: '20',
         urlparams:'chicken'
 
       },
@@ -63,7 +63,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 99,
         img: 'acv.jpg'
-        ,delivery: '5-10'
+        ,delivery: '5'
         ,urlparams:'salad'
       },
       {
@@ -72,7 +72,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
         img:'Devil.jpg' 
-        ,delivery: '25-35'
+        ,delivery: '25'
         ,urlparams:'burger'
       },
       {
@@ -81,7 +81,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 24,
         img: 'pizza3.jpg' 
-        ,delivery: '45-50'
+        ,delivery: '45'
         ,urlparams:'pizza'
       },
       {
@@ -90,7 +90,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 204,
         img: 'Pork Chicken Stew.jpg'
-        ,delivery: '45-50',
+        ,delivery: '45',
         urlparams:'chicken'
 
       },
@@ -100,7 +100,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 90,
         img: 'Chippycom.jpg'
-        ,delivery: '15-25'
+        ,delivery: '15'
         ,urlparams:'burger'
         
       },
@@ -110,7 +110,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 34,
         img: 'Egg Salad.jpg'
-        ,delivery: '30-50'
+        ,delivery: '30'
         ,urlparams:'salad'
         
       },
@@ -120,7 +120,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 90,
         img: 'Mideast.jpg'
-        ,delivery: '40-50'
+        ,delivery: '40'
         ,urlparams:'salad'
       },
       {
@@ -129,7 +129,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 65,
         img: 'doublebeef.jpg'
-        ,delivery: '40-50'
+        ,delivery: '40'
         ,urlparams:'burger'
       },
       {
@@ -138,7 +138,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 60,
         img: 'Colonelburger.jpg'
-        ,delivery: '40-50'
+        ,delivery: '40'
         ,urlparams:'burger'
       },
       {
@@ -147,7 +147,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 65,
         img: 'Zingerburger.jpg'
-        ,delivery: '40-50'
+        ,delivery: '40'
          ,urlparams:'burger'
       },
       {
@@ -156,7 +156,7 @@ export default [
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 65,
         img: 'pizza2.jpg'
-        ,delivery: '40-50'
+        ,delivery: '40'
         ,urlparams:'pizza'
       },
  

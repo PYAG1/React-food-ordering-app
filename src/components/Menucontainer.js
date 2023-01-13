@@ -48,7 +48,7 @@ export default function Menucontainer() {
 
   return (
     <div className={togglee ?  ' fixed left-0 top-0 w-full h-full bg-black/70' : ''}>
-    <div className={togglee ?'fixed top-0 right-0 w-full md:w-[375px] z-[101] drop-shadwo-md h-screen bg-white flex flex-col ease-in duration-500': ' h-full fixed right-[-105%] top-[0] ease-in duration-500 '}>
+    <div className={togglee ?'fixed top-0 right-0 w-full md:w-[375px] z-[101] drop-shadwo-md h-full bg-white flex flex-col ease-in duration-300': ' h-full fixed right-[-105%] top-[0] ease-in duration-300 '}>
         <div className='w-full flex items-center justify-between p-4'>
         <button onClick={close} >
             <FaArrowLeft  size={30}/>
@@ -57,7 +57,7 @@ export default function Menucontainer() {
         <p className=' text-lg font-semibold'>Cart</p>
 
 
-        <Button onClick={clear}>
+        <Button onClick={clear} >
             <p>Clear</p>
         </Button>
 
@@ -110,7 +110,7 @@ export default function Menucontainer() {
       <p className=' text-lg'>Ghc {total + 20}.00</p>
 
     </div>
-    <button className='w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] '>
+    <button className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
         Check Out
 
 </button>

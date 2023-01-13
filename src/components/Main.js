@@ -6,6 +6,7 @@ import { ShowChart } from '@mui/icons-material';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../store/cartslice';
 import Menucontainer from './Menucontainer';
+import SimpleSnackbar from './snackbar';
 
 export default function Main() {
 
@@ -17,7 +18,7 @@ console.log(fooddata);
 
 
   const foodD= fooddata.map((item,index)=>{
-    return <Food key={index} id={item.id} name={item.name} price={item.price} img={item.img}/>
+    return <Food key={index} id={item.id} delivery={item.delivery} name={item.name} price={item.price} img={item.img}/>
   })
 
   return (
@@ -32,7 +33,10 @@ console.log(fooddata);
      <Menucontainer/>
 
      <div className=' p-3 mt-[6em] w-full'>
-      <p className=' text-2xl'>Our Menu</p>
+      <p className=' text-2xl font-[Oswald]'>Our Menu</p>
+      
+
+    <div className=' w-[90px] border-b border-black my-2 lg:my-1'></div>
      </div>
      
 <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 px-3 items-center'>
@@ -42,6 +46,7 @@ console.log(fooddata);
 
 
       </div>
+      <SimpleSnackbar/>
     </div>
   )
 }
