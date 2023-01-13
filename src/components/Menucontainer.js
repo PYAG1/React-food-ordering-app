@@ -48,7 +48,7 @@ export default function Menucontainer() {
 
   return (
     <div className={togglee ?  ' fixed left-0 top-0 w-full h-full bg-black/70' : ''}>
-    <div className={togglee ?'fixed top-0 right-0 w-full md:w-[375px] z-[9999] drop-shadwo-md min-h-screen bg-white flex flex-col ease-in duration-300': ' h-full fixed right-[-105%] top-[0] ease-in duration-300 '}>
+    <div className={togglee ?'overflow-y-hidden fixed top-0 right-0 w-full md:w-[375px] z-[9999] drop-shadwo-md h-full bg-white flex flex-col ease-in duration-300': ' h-full fixed right-[-105%] top-[0] ease-in duration-300 '}>
         <div className='w-full flex items-center justify-between p-4'>
         <button onClick={close} >
             <FaArrowLeft  size={30}/>
