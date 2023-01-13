@@ -53,10 +53,11 @@ export default function SimpleSnackbar() {
       
       <Snackbar
         open={openn}
-        autoHideDuration={6000}
+        autoHideDuration={1500}
         onClose={handleClose}
         message="Item added to Cart"
         action={action}
+        
       />
     </div>
   );

@@ -86,7 +86,7 @@ export default [
       },
       {
         id: 12,
-        name: 'Pork Chicken Stew',
+        name: 'Chicken Stew',
         info: 'spicey with garlic and then deep fried to crispy perfection',
         price: 204,
         img: 'Pork Chicken Stew.jpg'

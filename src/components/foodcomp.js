@@ -19,10 +19,7 @@ const addhandler= ()=>{
    id,
     name,
     price,
-    img
-
-
-  }),cartActions.open())
+    img}),cartActions.open())
   
 
 }

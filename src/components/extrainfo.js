@@ -26,9 +26,9 @@ export default function Extrainfo({id,name,quantity,total,price,img}) {
   return (
   
     <div className=' w-full p-1 px-2 rounded-lg flex items-center gap-2 scroll'>
-    <img src={`../images/${img}`} className='w-[80px] h-[80px] object-cover rounded-[20px] scroll'/>
+    <img src={`../images/${img}`} className='w-[70px] h-[70px] object-cover rounded-[20px] scroll'/>
     <div className=' flex flex-col gap-2'>
-     <p className=' text-base font-semibold text-[white]'>
+     <p className=' text-base font-medium text-[white]'>
          {name}
      </p>
      <p className='text-sm block text-white font-semibold'>
