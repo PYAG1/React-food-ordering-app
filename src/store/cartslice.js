@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import React from "react";
 
 
 const cart = createSlice({
@@ -42,6 +43,21 @@ const cart = createSlice({
         clearcart(state){
             state.itemList = []
             state.totalQuantity= 0
+        },
+        delete(state,action){
+            
+                const id= action.payload;
+                const existingitem = state.itemList.find((item)=> id === item.id);
+                
+                if(existingitem.quantity=== 1){
+                    state.itemList = state.itemList.filter((item)=> item.id !== id);
+                    state.totalQuantity--
+                }
+                else{
+                    existingitem.quantity--;
+                    existingitem.totalprice -= existingitem.price;
+                }
+
         }
 
         

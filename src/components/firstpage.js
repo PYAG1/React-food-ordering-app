@@ -4,7 +4,7 @@ import image1 from '../components/save.jpg'
 import {CiBurger} from 'react-icons/ci'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Showcart from './showcart';
+
 
 export default function Firstpage() {
 

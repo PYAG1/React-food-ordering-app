@@ -1,14 +1,11 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardMedia from '@mui/material/CardMedia';
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../store/cartslice";
+import {FaShoppingBag} from 'react-icons/fa'
 
 export default function Food({name,id,price,img}){
 
@@ -48,12 +45,13 @@ const addhandler= ()=>{
   
 <div className=" pt-[1em] flex justify-between">
   <div>
-          <Typography>{name}</Typography>
-          <Typography>GHc{price}</Typography>
+          <div className=" text-xl font-medium font-[Oswald]">{name}</div>
+          < div className="font-[Roboto]">GHc {price}</div>
           </div>
           
           <button onClick={addhandler}>
-            Add
+            <FaShoppingBag size={22}/>
+            
           </button>
 
 
