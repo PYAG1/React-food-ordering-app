@@ -34,7 +34,7 @@ code {
   background-size: contain;
 }
 .border{
-  border:solid 1px  white;
+  border:solid 1px  black;
 }
 
 .imgborder{
@@ -97,3 +97,4 @@ code {
     opacity: 1;
   }
 }
+

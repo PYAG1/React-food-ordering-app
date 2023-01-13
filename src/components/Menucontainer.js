@@ -6,6 +6,7 @@ import Extrainfo from './extrainfo'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../store/cartslice'
 import empty from '../empty.svg'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -45,13 +46,15 @@ export default function Menucontainer() {
 
     const delivery = 20;
 
+    const move = useNavigate()
+
 
   return (
     <div className={togglee ?  ' fixed left-0 top-0 w-full h-full bg-black/70' : ''}>
-    <div className={togglee ?'overflow-y-hidden fixed top-0 right-0 w-full md:w-[375px] z-[9999] drop-shadwo-md h-full bg-white flex flex-col ease-in duration-300': ' h-full fixed right-[-105%] top-[0] ease-in duration-300 '}>
+    <div className={togglee ?' overscroll-none fixed top-0 right-0 w-full md:w-[375px] z-[9999] drop-shadwo-md h-full bg-white flex  flex-col ease-in duration-300': ' h-full fixed right-[-105%] top-[0] ease-in duration-300 '}>
         <div className='w-full flex items-center justify-between p-4'>
         <button onClick={close} >
-            <FaArrowLeft  size={30}/>
+            <FaArrowLeft  size={20}/>
         </button>
 
         <p className=' text-lg font-semibold'>Cart</p>
@@ -65,8 +68,8 @@ export default function Menucontainer() {
         </div>
 
     {/*Bottom section*/ }
-    <div className=' w-full h-full bg-[#1f1f1f] rounded-t-[2rem] flex flex-col'>
-        <div className=' w-full h-[340px] lg:h-[320px] md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll no-scrollbar'>
+    <div className=' w-full h-full  bg-[#1f1f1f] rounded-t-[2rem] flex flex-col'>
+        <div className=' w-full h-[340px] md:h-[500px] lg:h-[300px] md:h-42 px-6 py-10 flex flex-col gap-3 overflow-y-scroll no-scrollbar'>
         {!auth && <>  
        {data}
        </> }
@@ -83,7 +86,7 @@ export default function Menucontainer() {
                 
 
     </div>
-    <div className=' w-full flex-1 bg-[#353535] rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2 text-white'>
+    <div className=' w-full h-full  flex-1 bg-[#353535] rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2 text-white'>
       <div className='w-full flex items-center justify-between'>
       
         <p className=' text-lg'>Subtotal</p>
@@ -110,7 +113,7 @@ export default function Menucontainer() {
       <p className=' text-lg'>Ghc {total + 20}.00</p>
 
     </div>
-    <button className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
+    <button onClick={()=>move('/thanks')} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
         Check Out
 
 </button>

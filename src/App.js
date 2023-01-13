@@ -1,4 +1,5 @@
 import { Routes,Route } from "react-router-dom";
+import All from "./components/All";
 import Extrainfo from "./components/extrainfo";
 import Firstpage from "./components/firstpage";
 import Fooddetail from "./components/fooddetail";
@@ -10,9 +11,11 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Firstpage/>}/>
+        <Route path='/thanks' element={<All/>}/>
         <Route path='/main' element={<Main/>}/>
         <Route path='/extra ' element={<Extrainfo/>}/>
         <Route path='/main/:userId' element={<Fooddetail/>}/>
+      
       </Routes>
 
     </div>
