@@ -13,7 +13,7 @@ export default function Firstpage() {
 
 
   const move= useNavigate()
-
+//for loader
   useEffect(()=>{
     const timeout = setTimeout(() => {
       setshow(false)
