@@ -25,6 +25,10 @@ const addhandler= ()=>{
 }
 
 
+
+
+
+
 useEffect(()=>{
   const timeout = setTimeout(() => {
       dispatch(cartActions.close())

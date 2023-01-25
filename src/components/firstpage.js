@@ -52,15 +52,24 @@ export default function Firstpage() {
 
       <div className='text-[#ccff01] flex flex-col items-center gap-4 '>
         <p className=' text-2xl text-center text-[white] font-[Oswald]'>Tasty and Delicious Food just a tap away!</p>
-        <Button variant="outlined" className='w-[100px]'  color="inherit" onClick={()=>{
+       
+       <div className=' flex w-full justify-evenly'> <Button variant="outlined" className='w-[100px]'  color="inherit" onClick={()=>{
           move('/main')
         }}>
           Order
         </Button>
+
+        <Button variant="outlined" className='w-[100px]'  color="inherit" onClick={()=>{
+          move('/new')
+        }}>
+          Sign In
+        </Button>
+        </div>
  
 
       </div>
   </div>
+
   )
 }
 </div>
