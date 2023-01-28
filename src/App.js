@@ -7,8 +7,10 @@ import Fooddetail from "./components/fooddetail";
 import Main from "./components/Main";
 //import Newpage from "./components/newpage";
 import Signin from "./components/Signin";
+import History from "./history";
 import Signup from "./components/Signup";
 const Lazyabout = React.lazy(()=>import("./components/newpage"));
+
 
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
 <Route path='signin' element={<Signin/>}/>
 
         </Route>
+
+        
+        <Route path='/history' element={<History/>} />
 
       
       </Routes>

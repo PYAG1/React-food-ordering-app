@@ -31,7 +31,7 @@ export const AppProvider= ({children})=>{
     }
 
     function logout(value){
-        setuser(null)
+        setuser('')
 
     }
 

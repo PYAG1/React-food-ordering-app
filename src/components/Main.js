@@ -8,6 +8,7 @@ import { cartActions } from '../store/cartslice';
 import Menucontainer from './Menucontainer';
 import SimpleSnackbar from './snackbar';
 import { UseLog } from '../utility';
+import {FaUserCircle} from 'react-icons/fa'
 
 export default function Main() {
 
@@ -27,7 +28,9 @@ const showCart = useSelector((state)=> state.cart.showCart)
 
   const {user} = UseLog();
 
-  const truthcheck = user === null
+  const truthcheck = user === ''
+
+  console.log(user)
 
   return (
     <div>
@@ -41,7 +44,14 @@ const showCart = useSelector((state)=> state.cart.showCart)
      <Menucontainer/>
 
      <div className=' p-3 mt-[6em] w-full'>
-      {!truthcheck && <p>Your {user}</p>}
+
+     <div> 
+    
+
+      {!truthcheck && (<div className=' mb-[3em] flex items-center'>
+        
+          <p className=' text-2xl font-[Oswald] '>Welcome {user}</p></div>)
+          }
       <p className=' text-2xl font-[Oswald]'>Our Menu</p>
       
 
@@ -56,6 +66,7 @@ const showCart = useSelector((state)=> state.cart.showCart)
 
       </div>
       <SimpleSnackbar/>
+    </div>
     </div>
   )
 }
