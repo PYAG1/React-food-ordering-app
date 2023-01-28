@@ -1,7 +1,10 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Button } from '@mui/material';
 import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
+import {app} from './firebase'
+import { useNavigate } from 'react-router-dom';
+import { UseLog } from '../utility';
 
 export default function Signin() {
 
@@ -22,8 +25,17 @@ export default function Signin() {
 
         console.log(saform)
 
+        const auth = getAuth(app);
 
-        const suth = getAuth(app);
+
+        const {details,userName,user,getdocs}=UseLog()
+
+        console.log(details)
+
+
+        const navigate = useNavigate()
+
+
 
       function Submit(e){
         e.preventDefault()
@@ -32,10 +44,22 @@ export default function Signin() {
         .then((res)=>{
            alert('you have signed in')
            navigate('/main');
-           
         })
+        .catch((err)=>{
+          alert(err.message)
+       })
+       details.map((item)=>{
+        if(saform.email === item.email){
+          userName(item.name)
+        }
+      })
 
       }
+
+      useEffect(()=>{
+        getdocs()
+      },[])
+
   return (
     <div >
             <form className=' h-[0310px] p-3' onSubmit={Submit}>

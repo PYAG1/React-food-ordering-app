@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import { app, database } from './firebase';
 import {getAuth,createUserWithEmailAndPassword} from 'firebase/auth'
-import { collection,addDoc } from 'firebase/firestore';
+import { collection,addDoc, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
+import { UseLog } from '../utility';
 
 export default function Signup() {
 //state for input fields
@@ -25,6 +26,7 @@ export default function Signup() {
        }
        })
  }
+ const {getdocs,setdetails} = UseLog()
 
  //database for users
  const databas = collection(database,'users')
@@ -35,6 +37,9 @@ export default function Signup() {
 
  function Submit(e){
   e.preventDefault()
+  setdetails(prev=>{
+    return [...prev,form]
+  })
 //using firebase to create a new user
   createUserWithEmailAndPassword(Auth,form.email,form.password)
   .then((res)=>{
@@ -58,7 +63,7 @@ export default function Signup() {
     .catch((err)=>{
       alert(err.message)
    })
-
+getdocs()
      
 
 

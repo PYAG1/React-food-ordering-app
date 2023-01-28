@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store/cartslice';
 import Menucontainer from './Menucontainer';
 import SimpleSnackbar from './snackbar';
+import { UseLog } from '../utility';
 
 export default function Main() {
 
@@ -24,6 +25,10 @@ const showCart = useSelector((state)=> state.cart.showCart)
     return <Food key={index} id={item.id} delivery={item.delivery} name={item.name} price={item.price} img={item.img}/>
   })
 
+  const {user} = UseLog();
+
+  const truthcheck = user === null
+
   return (
     <div>
 
@@ -36,6 +41,7 @@ const showCart = useSelector((state)=> state.cart.showCart)
      <Menucontainer/>
 
      <div className=' p-3 mt-[6em] w-full'>
+      {!truthcheck && <p>Your {user}</p>}
       <p className=' text-2xl font-[Oswald]'>Our Menu</p>
       
 
