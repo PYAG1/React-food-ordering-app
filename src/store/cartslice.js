@@ -8,7 +8,8 @@ const cart = createSlice({
         itemList: [],
         totalQuantity:0,
         showCart:false,
-        showSnack:false
+        showSnack:false,
+        historyArray: {}
     },
     reducers:{
         Add(state,action){
@@ -81,6 +82,42 @@ const cart = createSlice({
                     existingitem.quantity--;
                     existingitem.totalprice -= existingitem.price;
                 }
+
+        },
+        addhistory(state,action){
+          const id =  Math.ceil(Math.random()*10000000)
+          const retrieveData = action.payload;
+
+          const date= new Date();
+          const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+          const acdate = `${date.getDate()}/${date.toLocaleString('default',{month:'short'})}/${date.getFullYear()}`
+
+        const value = state.historyArray;
+
+        value.id= id
+        value.username= retrieveData.user
+        value.total= retrieveData.finaltotal
+        value.name=`Order ${id} `
+        value.currenttime= time
+        value.currentdate= acdate
+        value.items= state.itemList
+
+          
+
+           /* state.historyArray.push(
+                {
+                    id:id,
+                    username: retrieveData.user,
+                    total: retrieveData.finaltotal,
+                    name:`Order ${id} `,
+                    currenttime: time,
+                    currentdate: acdate,
+                    items: state.itemList
+
+
+
+                }
+            )*/
 
         }
 

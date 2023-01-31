@@ -33,7 +33,7 @@ const {logout} = UseLog()
             
 
             </div>)}
-            <div className=' flex items-end cursor: pointer  ' onClick={()=>{
+            <div className=' flex items-end cursor-pointer  ' onClick={()=>{
               move('/')
               logout()
           }}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@mui/material'
 import { FaArrowLeft, FaTimes } from 'react-icons/fa'
 import fooddata from '../fooddata'
@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../store/cartslice'
 import empty from '../empty.svg'
 import { useNavigate } from 'react-router-dom'
+import { UseLog } from '../utility'
+import { addDoc, collection } from 'firebase/firestore'
+import { database } from './firebase'
 
 
 
@@ -27,6 +30,14 @@ export default function Menucontainer() {
       
       })
     
+  
+      const delivery = 20;
+
+      const finaltotal = total + delivery;
+
+
+      ////////
+    
 
     const dispatch = useDispatch();
 
@@ -44,9 +55,51 @@ export default function Menucontainer() {
     //to display empty cart 
     const auth = cartList.length === 0 ;
 
-    const delivery = 20;
 
     const move = useNavigate()
+
+    const historyArray= useSelector((state)=> state.cart.historyArray)
+
+    const {user}= UseLog();
+
+
+///creating a database for the orders
+const orderdatabase= collection(database,'Orders');
+
+/// 
+const [setter,seting]= useState([])
+
+  
+
+///to add to order history
+    function OrderHistory(){
+      dispatch(cartActions.addhistory({user,finaltotal}))
+      seting((prev)=>{
+       return [ ...prev, historyArray]
+      })
+
+
+      addDoc(orderdatabase,historyArray)
+      .then((res)=>alert("Order Received"))
+      .catch((err)=>alert(err.message))
+
+
+    }
+
+
+
+
+///check for conditional rendering;
+const renderingCheck = user ==='';
+
+
+
+
+
+
+
+console.log(historyArray)
+console.log(setter)
 
 
   return (
@@ -110,13 +163,27 @@ export default function Menucontainer() {
     <div className='w-full flex items-center justify-between'>
       
       <p className=' text-lg'>Total</p>
-      <p className=' text-lg'>Ghc {total + 20}.00</p>
+      <p className=' text-lg'>Ghc {finaltotal}.00</p>
 
     </div>
-    <button onClick={()=>move('/thanks')} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
-        Check Out
+{!renderingCheck &&
+  (    <button onClick={()=>{
+    OrderHistory()
+    move('/thanks')}} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
+      Check Out
 
-</button>
+</button>)
+}
+
+{
+  renderingCheck &&
+  (    <button onClick={()=>{
+
+    move('/thanks')}} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
+      Check Out
+
+</button>)
+}
  
 
 

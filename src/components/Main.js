@@ -28,6 +28,11 @@ const showCart = useSelector((state)=> state.cart.showCart)
 
   const {user} = UseLog();
 
+  const date = new Date();
+  const  actdate = `${date.getDay()}  ${ date.getUTCMonth() }  ${date.getFullYear()} `
+
+  console.log(actdate)
+
   const truthcheck = user === ''
 
   console.log(user)
