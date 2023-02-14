@@ -5,6 +5,8 @@ import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
 import {app} from './firebase'
 import { useNavigate } from 'react-router-dom';
 import { UseLog } from '../utility';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../store/cartslice';
 
 export default function Signin() {
 
@@ -35,6 +37,8 @@ export default function Signin() {
 
         const navigate = useNavigate()
 
+        const dispatch = useDispatch()
+
 
 
       function Submit(e){
@@ -44,6 +48,8 @@ export default function Signin() {
         .then((res)=>{
            alert('you have signed in')
            navigate('/main');
+           //likely to delete
+           dispatch(cartActions.clearhistory())
         })
         .catch((err)=>{
           alert(err.message)

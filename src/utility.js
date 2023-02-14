@@ -15,6 +15,7 @@ export const UseLog= ()=>{
 export const AppProvider= ({children})=>{
     const [details,setdetails]= useState([])
     const [user,setuser]= useState('');
+    const [container,setcontainer]= useState([])
 
 
     const data= collection(database,'users');
@@ -35,9 +36,31 @@ export const AppProvider= ({children})=>{
 
     }
 
+    const orderdata = collection(database,'Orders')
+
+    const getOrderData = async ()=>{
+        const value = await getDocs(orderdata)
+        setcontainer(value.docs.map((item)=>{
+          return {...item.data(),id:item.id}
+         }))
+    
+      }
+
+      const [historyObj, sethistoryObj] = useState({
+        id: '',
+        username: '',
+        total: '',
+        name: `Order`,
+        currenttime: '',
+        currentdate: '',
+        items: []
+        
+        
+        })
 
 
-return <Logs.Provider value={{getdocs,setdetails,details,userName,logout,user,userName}}>{children}</Logs.Provider>
+
+return <Logs.Provider value={{historyObj,sethistoryObj, getdocs,setdetails,details,userName,logout,user,userName,container,setcontainer,getOrderData}}>{children}</Logs.Provider>
     
 
 }

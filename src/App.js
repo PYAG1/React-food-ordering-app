@@ -21,7 +21,7 @@ function App() {
         <Route path='/thanks' element={<All/>}/>
         <Route path='/main' element={<Main/>}/>
         <Route path='/extra ' element={<Extrainfo/>}/>
-        <Route path='/main/:userId' element={<Fooddetail/>}/>
+   
 
         <Route path="/new" element={<React.Suspense fallback='loading....'><Lazyabout/></React.Suspense>}>
         <Route index element={<Signup/>}/>
@@ -33,6 +33,7 @@ function App() {
 
         
         <Route path='/history' element={<History/>} />
+        <Route path='/history/:userId' element={<Fooddetail/>}/>
 
       
       </Routes>

@@ -3,8 +3,14 @@ import { Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../store/cartslice'
 import { useNavigate } from 'react-router-dom'
+import { addDoc, collection } from 'firebase/firestore'
+import { database } from './firebase'
+import { UseLog } from '../utility'
+import { useEffect } from 'react'
 
 export default function All() {
+  
+ 
 
     const cartItems = useSelector((state)=> state.cart.itemList)
     let total = 0
@@ -18,11 +24,29 @@ export default function All() {
       const dispatch = useDispatch()
 //function to clear cart
       const Finalr=()=>{
+
+        addDoc(orderdatabase,historyObj)
+        .then((res)=>{alert("Order Received")
+
         dispatch( cartActions.clearcart())
         move('/main')
+      })
+        .catch((err)=>alert(err.message))
+     
  
       }
-    console.log(cartItems)
+
+      const {historyObj} = UseLog();
+
+      const orderdatabase= collection(database,'Orders');
+      function OrderHistory(){
+        //dispatch(cartActions.addhistory({user,finaltotal})) 
+        
+           
+        
+        
+            }
+
   return (
     <div className=' p-3 flex flex-col items-center w-full h-screen justify-between gap-3'>
         <div className=' p-3 flex flex-col items-center'>

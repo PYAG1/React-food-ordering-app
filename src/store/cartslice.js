@@ -84,7 +84,7 @@ const cart = createSlice({
                 }
 
         },
-        addhistory(state,action){
+      /*  addhistory(state,action){
           const id =  Math.ceil(Math.random()*10000000)
           const retrieveData = action.payload;
 
@@ -119,6 +119,9 @@ const cart = createSlice({
                 }
             )*/
 
+        
+        clearhistory(state,action){
+            state.historyArray = {}
         }
 
         

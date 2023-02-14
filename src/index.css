@@ -33,8 +33,8 @@ code {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.border{
-  border:solid 1px  black;
+.borderz{
+  border-bottom:solid 1px  #a09f9f;
 }
 
 .imgborder{
@@ -48,6 +48,10 @@ code {
 }
 .active{
   text-decoration: underline;
+}
+.zin{
+  z-index: 0
+  ;
 }
 
 

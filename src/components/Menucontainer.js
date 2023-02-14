@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
 import { FaArrowLeft, FaTimes } from 'react-icons/fa'
 import fooddata from '../fooddata'
@@ -60,28 +60,60 @@ export default function Menucontainer() {
 
     const historyArray= useSelector((state)=> state.cart.historyArray)
 
-    const {user}= UseLog();
+    const {user,historyObj,sethistoryObj}= UseLog();
 
 
 ///creating a database for the orders
 const orderdatabase= collection(database,'Orders');
 
 /// 
-const [setter,seting]= useState([])
+
+const id =  Math.ceil(Math.random()*10000000)
+//const retrieveData = action.payload;
+
+const date= new Date();
+const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+const acdate = `${date.getDate()}/${date.toLocaleString('default',{month:'short'})}/${date.getFullYear()}`
+/*
+const [historyObj, sethistoryObj] = useState({
+id: id,
+username: user,
+total: '',
+name: `Order ${id}`,
+currenttime: time,
+currentdate: acdate,
+items: []
+
+
+})*/
+
+function add(totalV,array){
+  sethistoryObj((prev)=> {
+    return {...prev, 
+
+id: id,
+username: user,
+name: `Order ${id}`,
+currenttime: time,
+currentdate: acdate,
+      total: totalV,
+      items: array
+    }
+  })
+}
+
+console.log(historyObj)
+
 
   
 
 ///to add to order history
     function OrderHistory(){
-      dispatch(cartActions.addhistory({user,finaltotal}))
-      seting((prev)=>{
-       return [ ...prev, historyArray]
-      })
+//dispatch(cartActions.addhistory({user,finaltotal})) 
 
-
-      addDoc(orderdatabase,historyArray)
-      .then((res)=>alert("Order Received"))
-      .catch((err)=>alert(err.message))
+    addDoc(orderdatabase,historyObj)
+    .then((res)=>{alert("Order Received")})
+    .catch((err)=>alert(err.message))
 
 
     }
@@ -92,6 +124,7 @@ const [setter,seting]= useState([])
 ///check for conditional rendering;
 const renderingCheck = user ==='';
 
+//const {getOrderData} = UseLog()
 
 
 
@@ -99,8 +132,12 @@ const renderingCheck = user ==='';
 
 
 console.log(historyArray)
-console.log(setter)
 
+/*
+useEffect(()=>{
+  getOrderData()
+
+},[1])*/
 
   return (
     <div className={togglee ?  ' fixed left-0 top-0 w-full h-full bg-black/70' : ''}>
@@ -168,8 +205,10 @@ console.log(setter)
     </div>
 {!renderingCheck &&
   (    <button onClick={()=>{
-    OrderHistory()
-    move('/thanks')}} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
+    add(finaltotal, cartList)
+    move('/thanks')
+
+    }} className= ' font-bold w-full h-[50px] lg:h-[35px] text-[black] rounded-[30px] bg-[#ccff01] hover:bg-[white] '>
       Check Out
 
 </button>)
