@@ -5,7 +5,7 @@ import Propcomponent from './components/historypropcomponent'
 import { UseLog } from './utility'
 import { FaArrowLeft} from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
-import { Button } from '@mui/material'
+
 
 export default function History() {
 
@@ -36,7 +36,7 @@ return 0;
   console.log(con)
 
   const orderHistory = newcontainer.map((item)=>{
-    return   <Propcomponent key={item.id} {...item}/>    
+    return   <Propcomponent key={item.id}  {...item}/>    
   })
 
   const move = useNavigate();
