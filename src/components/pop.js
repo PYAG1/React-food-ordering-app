@@ -12,7 +12,7 @@ export default function SimplePopper() {
 
   const toggle= useSelector((state)=> state.cart.showCart)
 
-  console.log(toggle)
+  
 
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);

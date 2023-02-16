@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { addDoc, collection } from 'firebase/firestore'
 import { database } from './firebase'
 import { UseLog } from '../utility'
-import { useEffect } from 'react'
+
 
 export default function All() {
   

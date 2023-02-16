@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
 import { FaArrowLeft, FaTimes } from 'react-icons/fa'
-import fooddata from '../fooddata'
 import Extrainfo from './extrainfo'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../store/cartslice'
@@ -58,7 +57,7 @@ export default function Menucontainer() {
 
     const move = useNavigate()
 
-    const historyArray= useSelector((state)=> state.cart.historyArray)
+  
 
     const {user,historyObj,sethistoryObj}= UseLog();
 
@@ -74,18 +73,7 @@ const id =  Math.ceil(Math.random()*10000000)
 const date= new Date();
 const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 const acdate = `${date.getDate()}/${date.toLocaleString('default',{month:'short'})}/${date.getFullYear()}`
-/*
-const [historyObj, sethistoryObj] = useState({
-id: id,
-username: user,
-total: '',
-name: `Order ${id}`,
-currenttime: time,
-currentdate: acdate,
-items: []
 
-
-})*/
 
 function add(totalV,array){
   sethistoryObj((prev)=> {
@@ -102,7 +90,6 @@ currentdate: acdate,
   })
 }
 
-console.log(historyObj)
 
 
   
@@ -131,13 +118,9 @@ const renderingCheck = user ==='';
 
 
 
-console.log(historyArray)
 
-/*
-useEffect(()=>{
-  getOrderData()
 
-},[1])*/
+
 
   return (
     <div className={togglee ?  ' fixed left-0 top-0 w-full h-full bg-black/70' : ''}>

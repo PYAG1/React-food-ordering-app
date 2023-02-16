@@ -2,19 +2,15 @@ import React, { useState } from 'react'
 import Nav from './Nav'
 import fooddata from '../fooddata.js'
 import Food from './foodcomp'
-import { ShowChart } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
-import { cartActions } from '../store/cartslice';
 import Menucontainer from './Menucontainer';
 import SimpleSnackbar from './snackbar';
 import { UseLog } from '../utility';
-import {FaUserCircle} from 'react-icons/fa'
+
 
 export default function Main() {
 
-//for filtering food
-  const [filter , setfilter] = useState()
-console.log(fooddata);
+
 
 
 const showCart = useSelector((state)=> state.cart.showCart)
@@ -31,11 +27,11 @@ const showCart = useSelector((state)=> state.cart.showCart)
   const date = new Date();
   const  actdate = `${date.getDay()}  ${ date.getUTCMonth() }  ${date.getFullYear()} `
 
-  console.log(actdate)
+  
 
   const truthcheck = user === ''
 
-  console.log(user)
+
 
   return (
     <div>

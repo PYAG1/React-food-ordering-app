@@ -1,6 +1,4 @@
-import { collection, getDoc, getDocs } from 'firebase/firestore'
 import React, { useEffect } from 'react'
-import { database } from './components/firebase'
 import Propcomponent from './components/historypropcomponent'
 import { UseLog } from './utility'
 import { FaArrowLeft} from 'react-icons/fa'
@@ -19,23 +17,20 @@ export default function History() {
   }) ;
 
   const con = newcontainer.sort((a,b)=>{
-
-
-
 if(a.currenttime < b.currenttime){
-  return 1;
+  return -1;
 }
 if ( a.currenttime> b.currenttime ){
-  return -1;
+  return 1;
 }
 return 0;
 }
   );
 
 
-  console.log(con)
+  
 
-  const orderHistory = newcontainer.map((item)=>{
+  const orderHistory =con.map((item)=>{
     return   <Propcomponent key={item.id}  {...item}/>    
   })
 
@@ -43,7 +38,7 @@ return 0;
 
 
 
-  console.log(container)
+  
 
 
   useEffect(()=>{

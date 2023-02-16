@@ -1,11 +1,9 @@
 import React from "react";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../store/cartslice";
-import {FaClock, FaShoppingBag} from 'react-icons/fa';
+import { FaShoppingBag} from 'react-icons/fa';
 import { useEffect } from "react";
 
 export default function Food({name,id,price,img,delivery}){

@@ -36,6 +36,9 @@ code {
 .borderz{
   border-bottom:solid 1px  #a09f9f;
 }
+.borders{
+  border:solid 1px  #a09f9f;
+}
 
 .imgborder{
   border:solid 1px white;

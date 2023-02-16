@@ -25,14 +25,14 @@ export default function Signin() {
            })
         }
 
-        console.log(saform)
+      
 
         const auth = getAuth(app);
 
 
-        const {details,userName,user,getdocs}=UseLog()
+        const {details,userName,getdocs}=UseLog()
 
-        console.log(details)
+      
 
 
         const navigate = useNavigate()
