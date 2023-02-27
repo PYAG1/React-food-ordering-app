@@ -2,8 +2,10 @@ import React, { useEffect,useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress';
 import image1 from '../components/save.jpg'
 import {CiBurger} from 'react-icons/ci'
+import {FaCopyright} from 'react-icons/fa'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Firstpage() {
@@ -31,8 +33,11 @@ export default function Firstpage() {
 
 {show && (<div className='flex flex-col items-center text-[white] pt-3 '>
 <CiBurger className='text-[#ccff01] text-5xl md-text-9xl'/>
+<small className=' text-xs font-[Oswald] flex items-center text-[#ccff01]'><FaCopyright className=' text-xs'/> PYAG</small>
 
-<CircularProgress color='inherit' />
+<div className=' mt-4'>
+<CircularProgress color='inherit'  />
+</div>
 </div>)}
 
 

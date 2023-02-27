@@ -84,7 +84,7 @@ export default function Signin() {
              </div>
              </div>
              <div className=' flex justify-center w-full'>
-             <Button type='submit'>Sign in</Button>
+             <Button type='submit' variant='outlined'>Sign in</Button>
              </div>
              
 

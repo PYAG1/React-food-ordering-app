@@ -22,7 +22,7 @@ export default function CustomizedBadges() {
   const show = useSelector((state)=> state.cart.showCart)
 
     const cartnum = useSelector((state)=>state.cart.totalQuantity)
-    console.log(cartnum)
+  
   return (
     <IconButton aria-label="cart" >
       
