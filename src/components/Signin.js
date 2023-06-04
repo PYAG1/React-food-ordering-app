@@ -30,7 +30,7 @@ export default function Signin() {
         const auth = getAuth(app);
 
 
-        const {details,userName,getdocs}=UseLog()
+        const {details,userName,getdocs,setshow,setmessage}=UseLog()
 
       
 
@@ -46,13 +46,16 @@ export default function Signin() {
         //signing with firebase
         signInWithEmailAndPassword(auth,saform.email,saform.password)
         .then((res)=>{
-           alert('you have signed in')
+        
+         
            navigate('/main');
            //likely to delete
            dispatch(cartActions.clearhistory())
         })
         .catch((err)=>{
-          alert(err.message)
+          setshow(true)
+          setmessage("Error Signing in")
+    
        })
        details.map((item)=>{
         if(saform.email === item.email){
@@ -83,8 +86,8 @@ export default function Signin() {
              <input type='password' name='password' value={saform.password} onChange={handlein} className='text-[black] md:text-xl w-[100%] md:h-[40px] md:w-full border border-black placeholder:pl-1 pl-1'  placeholder='enter your password' />
              </div>
              </div>
-             <div className=' flex justify-center w-full'>
-             <Button type='submit' variant='outlined'>Sign in</Button>
+             <div className=' flex justify-center w-full text-white ' >
+             <Button type='submit' variant='outlined' color='inherit'><p className=' text-white'>Sign in</p></Button>
              </div>
              
 

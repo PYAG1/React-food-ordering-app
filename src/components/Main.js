@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Menucontainer from './Menucontainer';
 import SimpleSnackbar from './snackbar';
 import { UseLog } from '../utility';
+import PositionedSnackbar from './snackar2';
 
 
 export default function Main() {
@@ -22,15 +23,17 @@ const showCart = useSelector((state)=> state.cart.showCart)
     return <Food key={index} id={item.id} delivery={item.delivery} name={item.name} price={item.price} img={item.img}/>
   })
 
-  const {user} = UseLog();
+  const {user,getuser,show,setshow,message} = UseLog();
 
   const date = new Date();
   const  actdate = `${date.getDay()}  ${ date.getUTCMonth() }  ${date.getFullYear()} `
 
   
+getuser()
 
   const truthcheck = user === ''
 
+ 
 
 
   return (
@@ -67,6 +70,11 @@ const showCart = useSelector((state)=> state.cart.showCart)
 
       </div>
       <SimpleSnackbar/>
+      {<PositionedSnackbar
+        value={show}
+        setshow={setshow}
+        text={message}
+      />}
     </div>
     </div>
   )

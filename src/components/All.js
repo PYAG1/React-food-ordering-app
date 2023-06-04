@@ -8,6 +8,7 @@ import { database } from './firebase'
 import { UseLog } from '../utility'
 
 
+
 export default function All() {
   
  
@@ -26,7 +27,9 @@ export default function All() {
       const Finalr=()=>{
 
         addDoc(orderdatabase,historyObj)
-        .then((res)=>{alert("Order Received")
+        .then((res)=>{
+          setshow(true)
+          setmessage("Your Order has been received")
 
         dispatch( cartActions.clearcart())
         move('/main')
@@ -36,7 +39,8 @@ export default function All() {
  
       }
 
-      const {historyObj} = UseLog();
+      const {historyObj,setshow,setmessage} = UseLog();
+
 
       const orderdatabase= collection(database,'Orders');
       function OrderHistory(){

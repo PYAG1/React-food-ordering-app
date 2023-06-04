@@ -6,9 +6,12 @@ import {getAuth,createUserWithEmailAndPassword} from 'firebase/auth'
 import { collection,addDoc, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { UseLog } from '../utility';
+import PositionedSnackbar from './snackar2';
 
 export default function Signup() {
+
 //state for input fields
+
   const [form,setform]= useState({
     name:'',
     email:'',
@@ -26,7 +29,7 @@ export default function Signup() {
        }
        })
  }
- const {getdocs,setdetails} = UseLog()
+ const {getdocs,setdetails,setmessage,setshow} = UseLog()
 
  //database for users
  const databas = collection(database,'users')
@@ -43,8 +46,13 @@ export default function Signup() {
 //using firebase to create a new user
   createUserWithEmailAndPassword(Auth,form.email,form.password)
   .then((res)=>{
-     alert('Your account has been created')
-     move('/new/signin')
+
+    setmessage(`Your account has been created`)
+
+ setshow(true)
+     setTimeout(()=>{
+      move('/new/signin')
+     },3400)
 
   //adding the user details to a database
      addDoc(databas,form)
@@ -53,8 +61,9 @@ export default function Signup() {
    
      })
      .catch((err)=>{
-       alert(err.message)
+      setmessage(`We hit a roadblock!`)
      })
+     
     
     
     
@@ -92,9 +101,10 @@ getdocs()
     </div>
     </div>
 
-    <div className=' flex justify-center w-full mt-[2em]'>
-    <Button variant='outlined' type='submit'>Sign up</Button>
+    <div className=' flex justify-center w-full mt-[2em] text-white'>
+    <Button variant='outlined' type='submit' color='inherit'>Sign up</Button>
     </div>
+ 
 
 
 

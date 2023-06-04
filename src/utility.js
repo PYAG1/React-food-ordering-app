@@ -16,6 +16,8 @@ export const AppProvider= ({children})=>{
     const [details,setdetails]= useState([])
     const [user,setuser]= useState('');
     const [container,setcontainer]= useState([])
+    const [show, setshow] = useState(false);
+    const [message,setmessage]= useState("")
 
 
     const data= collection(database,'users');
@@ -28,7 +30,11 @@ export const AppProvider= ({children})=>{
 
         
     function userName(value){
-        setuser(value)
+      localStorage.setItem("users", value)
+    }
+
+    function getuser(){
+        setuser(localStorage.getItem("users"))
     }
 
     function logout(value){
@@ -60,7 +66,7 @@ export const AppProvider= ({children})=>{
 
 
 
-return <Logs.Provider value={{historyObj,sethistoryObj, getdocs,setdetails,details,userName,logout,user,userName,container,setcontainer,getOrderData}}>{children}</Logs.Provider>
+return <Logs.Provider value={{show,setshow,message,setmessage,getuser,historyObj,sethistoryObj, getdocs,setdetails,details,userName,logout,user,userName,container,setcontainer,getOrderData}}>{children}</Logs.Provider>
     
 
 }
