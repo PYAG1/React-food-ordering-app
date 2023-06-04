@@ -38,7 +38,7 @@ return 0;
 
 
 
-  
+  const check = newcontainer.length === 0
 
 
   useEffect(()=>{
@@ -57,12 +57,18 @@ return 0;
       </div>
 
 
-      <div className=' mt-8 p-4 md:px-[10em] '>
+     {!check &&( <div className=' mt-8 p-4 md:px-[10em] '>
         
         {orderHistory}
 
 
-      </div>
+      </div>)}
+
+      {check && (
+        <div className='w-full text-xl md:text-3xl font-bold text-center pt-[10em] '>
+        <p>You have no previous orders</p>
+        </div>
+      )}
 
 
 

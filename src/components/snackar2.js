@@ -60,7 +60,7 @@ export default function PositionedSnackbar({value, setshow,text}) {
      
 
       >
-        <p className='w-full md:min-w-[210px] rounded-[10px] p-3 text-white bg-[#081226] text-[Archivo]'>{text}</p>
+        <p className='w-full md:min-w-[210px] rounded-[10px] p-3 text-white bg-[#1f1f1f] text-[Archivo]'>{text}</p>
         </Snackbar>
     </div>
   );

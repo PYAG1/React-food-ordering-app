@@ -7,9 +7,10 @@ import { useNavigate } from 'react-router-dom';
 import { UseLog } from '../utility';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../store/cartslice';
+import Loader from "../images/Loading.svg"
 
 export default function Signin() {
-
+  const [loading,setloading]=useState(false)
     const [saform,sasetform]= useState({
   
         email:'',
@@ -42,6 +43,7 @@ export default function Signin() {
 
 
       function Submit(e){
+        setloading(true)
         e.preventDefault()
         //signing with firebase
         signInWithEmailAndPassword(auth,saform.email,saform.password)
@@ -53,10 +55,12 @@ export default function Signin() {
            dispatch(cartActions.clearhistory())
         })
         .catch((err)=>{
+        
           setshow(true)
           setmessage("Error Signing in")
     
        })
+       
        details.map((item)=>{
         if(saform.email === item.email){
           userName(item.name)
@@ -87,7 +91,9 @@ export default function Signin() {
              </div>
              </div>
              <div className=' flex justify-center w-full text-white ' >
-             <Button type='submit' variant='outlined' color='inherit'><p className=' text-white'>Sign in</p></Button>
+             <Button type='submit' variant='outlined' color='inherit'><p className=' text-white'>
+             {loading ?  <img src={Loader} className='h-[2rem]' key={loading}/> : 'Sign up'}
+              </p></Button>
              </div>
              
 

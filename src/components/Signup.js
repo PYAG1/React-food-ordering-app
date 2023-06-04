@@ -7,9 +7,10 @@ import { collection,addDoc, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { UseLog } from '../utility';
 import PositionedSnackbar from './snackar2';
+import Loader from "../images/Loading.svg"
 
 export default function Signup() {
-
+const [loading,setloading]=useState(false)
 //state for input fields
 
   const [form,setform]= useState({
@@ -39,10 +40,12 @@ export default function Signup() {
 
 
  function Submit(e){
+  setloading(true)
   e.preventDefault()
   setdetails(prev=>{
     return [...prev,form]
   })
+  
 //using firebase to create a new user
   createUserWithEmailAndPassword(Auth,form.email,form.password)
   .then((res)=>{
@@ -70,7 +73,9 @@ export default function Signup() {
     
     })
     .catch((err)=>{
-      alert(err.message)
+      setshow(true)
+      setmessage(`We hit a roadblock!`)
+      setloading(false)
    })
 getdocs()
      
@@ -102,7 +107,10 @@ getdocs()
     </div>
 
     <div className=' flex justify-center w-full mt-[2em] text-white'>
-    <Button variant='outlined' type='submit' color='inherit'>Sign up</Button>
+    <Button variant='outlined' type='submit' color='inherit'>
+      
+    {loading ?  <img src={Loader} className='h-[2rem]' key={loading}/> : 'Sign up'}
+      </Button>
     </div>
  
 
