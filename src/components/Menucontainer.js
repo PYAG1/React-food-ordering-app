@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
-import { FaArrowLeft, FaTimes } from 'react-icons/fa'
+import { FaArrowLeft } from 'react-icons/fa'
 import Extrainfo from './extrainfo'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '../store/cartslice'
