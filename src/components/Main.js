@@ -31,7 +31,7 @@ const showCart = useSelector((state)=> state.cart.showCart)
   
 getuser()
 
-  const truthcheck = user === ''
+  const truthcheck = user === null
 
  
 

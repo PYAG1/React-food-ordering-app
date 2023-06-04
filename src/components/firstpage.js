@@ -59,6 +59,7 @@ export default function Firstpage() {
         <p className=' text-2xl text-center text-[white] font-[Oswald]'>Tasty and Delicious Food just a tap away!</p>
        
        <div className=' flex w-full justify-evenly'> <Button variant="outlined" className='w-[100px]'  color="inherit" onClick={()=>{
+        localStorage.clear();
           move('/main')
         }}>
           Order

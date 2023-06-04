@@ -18,7 +18,7 @@ dispatch(cartActions.togglestae())
 
 const {user} = UseLog()
 
-const truthcheck = user === ''
+const truthcheck = user === null
 
 const move = useNavigate()
 
